@@ -25,7 +25,7 @@ def Scrape():
 
     tags = doc.find_all('strong')
 
-    with open('/Users/joshprunty/Desktop/python shit/Webscraper/dishes.txt','w') as f:
+    with open('/Users/joshprunty/Desktop/python/Webscraper/dishes.txt','w') as f:
         for tag in tags:
             f.write(tag.text)
             f.write('\n')
