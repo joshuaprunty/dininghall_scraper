@@ -78,11 +78,7 @@ def Scrape(hall, meal):
     # Get html for BeautifulSoup scraping
     content = driver.page_source
 
-    with open('output.html', 'w', encoding='utf-8') as f:
-        f.write(content)
-
-    with open('output.html','r') as f:
-        doc = BeautifulSoup(f, 'html.parser')
+    doc = BeautifulSoup(content, 'html.parser')
 
     # Print out text of each <strong> tag - these contain the entree/option names
     tags = doc.find_all('strong')
